@@ -1,0 +1,129 @@
+body {
+  background-color: #1c1927;
+  background-image: linear-gradient(135deg, #1e1b2a 60%, #ff009552, #ffcdffa0);
+  font-family: "Poppins", sans-serif;
+}
+
+.content {
+  max-width: 386px;
+  min-width: 375px;
+  padding-top: 180px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.email__sign,
+.password__sign {
+  font-size: 16px;
+  font-weight: 500;
+  color: #eae6ef;
+  line-height: 21.6px;
+  margin-bottom: 12px;
+}
+
+.email__entry,
+.password__entry {
+  background-color: #1c192700;
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: #90859c;
+  font-weight: 600;
+  font-size: 16px;
+  padding-left: 56px;
+  /* width: 386px; */
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.email__entry:active,
+.password__entry:active {
+  border-color: #7b14ff;
+  color: #ffffff;
+}
+
+.email {
+  position: relative;
+}
+
+.password {
+  position: relative;
+}
+
+.email--img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50px;
+  left: 18px;
+}
+
+.password--img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50px;
+  left: 18px;
+}
+
+/* .email__entry::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/Email.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.password__entry::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/Lock.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+} */
+
+.button__submit {
+  background-color: #7b14ff;
+  border-radius: 8px;
+  width: 386px;
+  height: 48px;
+  margin-bottom: 24px;
+  color: #eae6ef;
+  margin-bottom: 32px;
+}
+
+.button__submit:hover {
+  background-color: #8647e0;
+}
+
+.button__submit:active {
+  background-color: #4400a5;
+}
+
+.text {
+  text-align: center;
+  color: #90859c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin-bottom: 178px;
+}
+
+.link {
+  color: #90859c;
+  text-decoration: underline;
+}

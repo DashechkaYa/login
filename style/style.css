@@ -1,129 +1,156 @@
+:root {
+  --main-color: #7b14ff;
+  --main-color-hover: #8647e0;
+  --main-color-active: #4400a5;
+  --border-color: #3f3b4c;
+  --text-color: #90859c;
+  --gray-light-color: #eae6ef;
+  --white-color: #ffffff;
+  --bg-color: #1c1927;
+  --bg-color-hover: #201c2d;
+  --main-font: "Poppins", sans-serif;
+  --form-container-width: 386px;
+}
+
 body {
-  background-color: #1c1927;
-  background-image: linear-gradient(135deg, #1e1b2a 60%, #ff009552, #ffcdffa0);
-  font-family: "Poppins", sans-serif;
+  /* background-image: linear-gradient(135deg, #1e1b2a 60%, #ff009552, #ffcdffa0); */
+  background-image: url("../img/BG-login.png");
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  font-family: var(--main-font);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .content {
-  max-width: 386px;
-  min-width: 375px;
-  padding-top: 180px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: var(--form-container-width);
 }
 
 .title {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 600;
-  color: #ffffff;
-  padding-bottom: 40px;
+  color: var(--white-color);
+  letter-spacing: -0.2px;
+  line-height: 120%;
+  margin-bottom: 40px;
 }
 
-.email,
-.password {
+.form {
+  display: block;
+}
+
+.form__field {
+  margin-bottom: 1.5rem;
+}
+
+.form__button {
+  margin-bottom: 2rem;
+}
+
+.field {
+  display: block;
+}
+
+.field__inner {
+  position: relative;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
-.email__sign,
-.password__sign {
-  font-size: 16px;
+.field__label {
+  display: inline-block;
+  font-size: 1rem;
   font-weight: 500;
-  color: #eae6ef;
-  line-height: 21.6px;
-  margin-bottom: 12px;
+  color: var(--gray-light-color);
+  line-height: 135%;
+  margin-bottom: 0.75rem;
 }
 
-.email__entry,
-.password__entry {
-  background-color: #1c192700;
-  border: 1px solid;
+.field__input {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  border-color: #90859c;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   padding-left: 56px;
-  /* width: 386px; */
+  padding-right: 16px;
+  width: 100%;
   height: 48px;
-  margin-bottom: 24px;
+  color: var(--white-color);
+  outline: none;
+  transition-property: background-color color border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 
-.email__entry:active,
-.password__entry:active {
-  border-color: #7b14ff;
-  color: #ffffff;
+.field__input::placeholder {
+  color: var(--text-color);
 }
 
-.email {
-  position: relative;
-}
-
-.password {
-  position: relative;
-}
-
-.email--img {
+.field__icon {
+  position: absolute;
+  left: 16px;
   width: 24px;
   height: 24px;
-  position: absolute;
-  top: 50px;
-  left: 18px;
+  fill: var(--border-color);
+  transition: fill 0.2s ease;
 }
 
-.password--img {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 50px;
-  left: 18px;
+.field__input:hover {
+  background-color: var(--bg-color-hover);
 }
 
-/* .email__entry::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background: url(../img/Email.svg);
-  background-repeat: no-repeat;
-  position: absolute;
+.field__input:focus {
+  background-color: transparent;
+  border-color: var(--main-color);
 }
 
-.password__entry::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background: url(../img/Lock.svg);
-  background-repeat: no-repeat;
-  position: absolute;
-} */
+.field__input:focus + .field__icon {
+  fill: var(--main-color);
+}
 
-.button__submit {
-  background-color: #7b14ff;
+.button {
+  background-color: var(--main-color);
   border-radius: 8px;
-  width: 386px;
   height: 48px;
-  margin-bottom: 24px;
-  color: #eae6ef;
-  margin-bottom: 32px;
+  color: var(--white-color);
+  border: none;
+  font-weight: 600;
+  padding: 0 32px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.button__submit:hover {
-  background-color: #8647e0;
+.button--fluid {
+  width: 100%;
 }
 
-.button__submit:active {
-  background-color: #4400a5;
+.button:hover {
+  background-color: var(--main-color-hover);
+}
+
+.button:active {
+  background-color: var(--main-color-active);
 }
 
 .text {
   text-align: center;
-  color: #90859c;
-  font-size: 14px;
+  color: var(--text-color);
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 22.4px;
-  margin-bottom: 178px;
+  line-height: 160%;
 }
 
 .link {
-  color: #90859c;
+  color: var(--text-color);
   text-decoration: underline;
 }

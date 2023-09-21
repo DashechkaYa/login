@@ -47,6 +47,7 @@ body {
 }
 
 .field__label {
+  display: inline-block;
   font-size: 1rem;
   font-weight: 500;
   color: #eae6ef;
@@ -76,6 +77,7 @@ body {
   background-color: transparent;
   border-color: 1px solid #7b14ff;
   color: #ffffff;
+  outline: none;
 }
 
 .field__icon {
